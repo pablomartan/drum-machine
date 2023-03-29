@@ -5,7 +5,7 @@ const port = 3000;
 
 module.exports = {
     mode: 'development',
-    entry: '.src/index.js',
+    entry: './src/index.js',
     output: {
         filename: 'bundle.js'
     },
@@ -21,16 +21,16 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ],
-        plugins: [
-            new HtmlWebPackPlugin({
-                template: 'src/html/index.html'
-            })
-        ],
-        devServer: {
-            host: 'localhost',
-            port: port,
-            historyApiFallback: false,
-            open: true
-        }
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: 'src/html/index.html'
+        })
+    ],
+    devServer: {
+        host: 'localhost',
+        port: port,
+        historyApiFallback: false,
+        open: true
     }
 };
