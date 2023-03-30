@@ -8,19 +8,10 @@ export class DrumMachine extends React.Component {
   }
 
   render() {
-    document.body.addEventListener('keypress', e => {
-      const k = e.key.toUpperCase();
-      try {
-        document.getElementById(k).play();
-      } catch (e) {
-        console.log(e);
-      }
-    });
-
     return(
-      <div id="drum-machine">
-        <DrumPadContainer />
-        <Display />
+      <div id='drum-machine'>
+        <DrumPadContainer onKeyPress={this.props.keypress} />
+        <Display sample={this.props.sample} />
       </div>
     )
   }
