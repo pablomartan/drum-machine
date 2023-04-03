@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    background: floralwhite;
+    color: indianred;
+    font-family: Orbitron;
+}
+
+#drum-machine {
+    padding: 30px;
+    border: 3px solid lightcoral;
+    background: blanchedalmond;
+}
+
+#display {
+    min-height: 35px;
+    min-width: 110px;
+    background-color: floralwhite;
+    border: 2px solid lightcoral;
+}
+
+#pad-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    grid-gap: 10px;
+    max-width: 400px;
+}
+
+.drum-pad {
+    display: block;
+    width: 90px;
+    height: 70px;
+    color: indianred;
+    background-color: navajowhite;
+    border: 2px solid lightcoral;
+    font-weight: bold;
+}
+
+.play {
+    background-color: floralwhite !important;
+}
