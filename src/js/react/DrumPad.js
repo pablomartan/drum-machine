@@ -19,7 +19,7 @@ export class DrumPad extends React.Component {
     document.getElementById(this.props.audId).play();
     document.getElementById('display').innerText = this.props.id;
     targ.classList.toggle('play');
-    setTimeout(() => targ.classList.toggle('play'), 500);
+    setTimeout(() => targ.classList.toggle('play'), 1000);
   }
 
   render() {
@@ -27,7 +27,7 @@ export class DrumPad extends React.Component {
     const audSrc = this.props.src;
     
     return(
-        <div className='drum-pad d-flex justify-content-center align-items-center' id={this.props.id} onClick={this.handleClick}>
+        <div className='drum-pad d-flex justify-content-center align-items-center shadow' id={this.props.id} onClick={this.handleClick}>
           <p className='m-auto'>{audId}</p>
           <Audio id={audId} src={audSrc} />
         </div>
