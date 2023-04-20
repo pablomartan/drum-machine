@@ -12,7 +12,7 @@ export class Display extends React.Component {
   render() {
     return(
       <div id='display-container'>
-        <p id='display' className='text-center'>
+        <p id='display' className='text-center pt-1'>
           {this.props.sample}
          </p>
       </div>
