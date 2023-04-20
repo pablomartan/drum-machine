@@ -6,22 +6,36 @@ html {
 
 body {
     height: 100%;
-    background: floralwhite;
-    color: indianred;
+    background: dimgrey;
+    color: floralwhite;
     font-family: Orbitron;
+}
+
+@media (min-width: 265px) and (max-width: 440px) {
+    #drum-machine {
+        flex-direction: column;
+    }
+
+    #display {
+        order: 1;
+    }
+
+    #pad-container {
+        order: 2;
+    }
 }
 
 #drum-machine {
     padding: 30px;
-    border: 3px solid lightcoral;
-    background: blanchedalmond;
+    background: #424242;
+    border: 2px solid lightsalmon;
 }
 
 #display {
-    min-height: 35px;
+    min-height: 40px;
     min-width: 110px;
-    background-color: floralwhite;
-    border: 2px solid lightcoral;
+    background-color: #202020;
+    border: 2px solid lightsalmon;
 }
 
 #pad-container {
@@ -29,19 +43,27 @@ body {
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
     grid-gap: 10px;
-    max-width: 400px;
 }
 
 .drum-pad {
     display: block;
     width: 90px;
     height: 70px;
-    color: indianred;
-    background-color: navajowhite;
-    border: 2px solid lightcoral;
+    color: snow;
+    background: dimgrey;
+    border: 1px solid lightsalmon;
+    border-radius: 7px;
     font-weight: bold;
+
+    &:active {
+    background-color: lightgrey !important;
+    }
 }
 
 .play {
-    background-color: floralwhite !important;
+    background-color: lightgrey !important;
+}
+
+a {
+    color: lightsalmon; 
 }
