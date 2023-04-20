@@ -9,7 +9,7 @@ export class DrumMachine extends React.Component {
 
   render() {
     return(
-      <div id='drum-machine' className='d-flex col-6 justify-content-between'>
+      <div id='drum-machine' className='d-flex col-12 col-md-8 col-lg-6 col-xl-5 justify-content-between shadow-lg'>
         <DrumPadContainer onKeyPress={this.props.keypress} />
         <Display sample={this.props.sample} />
       </div>
